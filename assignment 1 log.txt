@@ -1,0 +1,3 @@
+https://www.mkyong.com/java/how-to-loop-arraylist-in-java/
+
+website used to help with writing for loops with arraylist in java.
