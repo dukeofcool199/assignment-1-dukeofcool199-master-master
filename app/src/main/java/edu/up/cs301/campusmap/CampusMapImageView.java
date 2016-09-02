@@ -76,6 +76,7 @@ public class CampusMapImageView extends ImageView {
     protected void clear()
     {
         tokens.clear();
+        tokens.trimToSize();
         tokens.add(new SimpleMapToken(0,0));
     }
 }

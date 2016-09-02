@@ -19,6 +19,7 @@ import android.widget.RadioButton;
  * =====================================================
  *
  * @author Steven R. Vegdahl
+ * Author Jenkin Schibel
  * @version August 2015
  */
 public class CampusMapActivity extends AppCompatActivity implements View.OnTouchListener {
@@ -84,6 +85,12 @@ public class CampusMapActivity extends AppCompatActivity implements View.OnTouch
         // for a "repaint" so that that the new token shows up
         imageView.invalidate();
 
+        if(clearButton.isPressed())
+        {
+            clear();
+        }
+
+
         // returnn true because we've handled the event
         return true;
     }
@@ -96,8 +103,6 @@ public class CampusMapActivity extends AppCompatActivity implements View.OnTouch
     public int getCheckedIndex() {
         // run through the array of radio buttons, returning when we find
         // a checked one
-        if(clearButton.isPressed() == false)
-        {
             for (int i = 0; i < radioButtons.length; i++)
             {
                 if (radioButtons[i].isChecked())
@@ -105,16 +110,8 @@ public class CampusMapActivity extends AppCompatActivity implements View.OnTouch
                     return i;
                 }
             }
-        }
-        else
-        {
-            clear();
-
             // return -1 if none were checked
             return -1;
-        }
-        return -1;
-
     }
     public void clear()
     {
